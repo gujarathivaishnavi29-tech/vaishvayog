@@ -1,0 +1,383 @@
+/* ==========================================
+   VAISHVA YOG — PREMIUM COMPONENT STYLES
+   ========================================== */
+
+/* 1. Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* White background prevents background text overlap */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color, #1b4332); /* Forest Green */
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #2d3748;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color, #d4af37); /* Warm Gold */
+}
+
+.mobile-nav-toggle {
+    display: none; /* Hidden on desktop view */
+}
+
+/* 2. Hero Section */
+.hero-section {
+    padding: 8rem 2rem 4rem 2rem; /* Added top padding so the fixed nav doesn't cut it off */
+    background: linear-gradient(180deg, #f4f6f0 0%, #ffffff 100%); /* Elegant soft sage-cream gradient */
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--primary-color, #1b4332);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 2.5rem;
+}
+
+/* Premium Buttons */
+.btn-primary, .btn-submit {
+    display: inline-block;
+    background-color: var(--primary-color, #1b4332);
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    border-radius: 50px; /* Fully rounded elegant style */
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(27, 67, 50, 0.15);
+}
+
+.btn-primary:hover, .btn-submit:hover {
+    background-color: var(--accent-color, #d4af37);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.25);
+}
+
+/* 3. My Journey Section */
+.journey-section {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color, #1b4332);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color, #d4af37);
+}
+
+.journey-grid {
+    display: grid;
+    grid-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.journey-text p {
+    margin-bottom: 1.5rem;
+}
+
+.journey-impact {
+    background-color: #fafd7; /* Soft aesthetic container background */
+    padding: 2.5rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--primary-color, #1b4332);
+}
+
+.journey-impact h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color, #1b4332);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.journey-impact ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.journey-impact li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--primary-color, #1b4332);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+/* 4. Classes Section */
+.classes-section {
+    padding: 6rem 2rem;
+    background-color: #fbfbf8; /* Cream background layer */
+}
+
+.section-subtitle {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #718096;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.class-card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2); /* Soft gold tint outline */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color, #d4af37);
+    box-shadow: 0 10px 25px rgba(27, 67, 50, 0.05);
+}
+
+.batch-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: #f4f6f0;
+    color: var(--primary-color, #1b4332);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.class-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color, #1b4332);
+    margin-bottom: 0.5rem;
+}
+
+.time-slot {
+    font-family: 'Inter', sans-serif;
+    color: var(--accent-color, #d4af37);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.class-card p:not(.time-slot) {
+    font-family: 'Inter', sans-serif;
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 5. Registration Section & Form Elements */
+.join-section {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+}
+
+.form-container {
+    max-width: 650px !important; /* Forces the form wrapper to be perfectly centered and readable */
+    margin: 0 auto;
+}
+
+.form-intro {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 3rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px; /* Softer minimalist input corners */
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #fbfbfb;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #1b4332);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.08);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.05rem;
+}
+
+/* 6. Footer Layout */
+.footer {
+    background-color: #1b4332; /* Deep forest branding signature block */
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #f4f6f0;
+}
+
+/* Responsive UI Adjustments for Mobile Smart Devices */
+@media (max-width: 968px) {
+    .hero-container, .journey-grid, .classes-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .navbar .nav-links {
+        display: none; /* Add menu script logic here later if needed */
+    }
+}
+
+/* Custom Media Dimensions & Alignments */
+
+/* Scales the navigation bar logo neatly */
+.nav-logo {
+    height: 50px; /* Constrains height so it sits elegantly in the bar */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.04);
+}
+
+/* Formats the hero image panel on the right side */
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-main-img {
+    width: 100%;
+    max-width: 450px; /* Keeps the frame sharp and well-proportioned */
+    height: auto;
+    border-radius: 20px; /* Soft aesthetic curved corners */
+    box-shadow: 0 10px 30px rgba(27, 67, 50, 0.08); /* Deep premium framing shadow */
+}

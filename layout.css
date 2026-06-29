@@ -1,0 +1,143 @@
+/*
+ * layout.css — Section Layouts, Grid, and Spacing for Vaishva Yog Website
+ *
+ * Mobile-first approach. Breakpoints:
+ *   Base    : < 480px  (default styles)
+ *   Tablet  : >= 768px
+ *   Desktop : >= 1024px
+ *   Wide    : >= 1400px
+ *
+ * All values reference CSS custom properties from tokens.css.
+ * No hardcoded pixel colours.
+ */
+
+/* ─── 3.1 · Global Layout — Body & Main ────────────────────────────────────── */
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ─── 3.1 · Container ────────────────────────────────────────────────────────
+ *
+ * Fluid container centred with auto side margins.
+ * Max-width cap applied at wide breakpoint (>= 1400px).
+ */
+
+.container {
+  width: 100%;
+  padding-inline: var(--space-6);
+  margin-inline: auto;
+}
+
+/* ─── 3.1 · Section Scaffold ─────────────────────────────────────────────────
+ *
+ * Shared vertical rhythm for every full-width section.
+ */
+
+.section {
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  width: 100%;
+}
+
+/* ─── 3.1 · Section Background Alternation ───────────────────────────────────
+ *
+ * Cream  → #home, #my-journey, #join-now  (warm / breathing-room sections)
+ * Green  → #classes                       (forest green for contrast & energy)
+ */
+
+#home,
+#my-journey,
+#join-now {
+  background: var(--color-cream);
+}
+
+#classes {
+  background: var(--color-green);
+}
+
+/* ─── 3.1 · Responsive Breakpoints (structural scaffold) ────────────────────
+ *
+ * Content-specific rules are added in subsequent blocks below.
+ * These media queries establish the layout tiers referenced across the file.
+ */
+
+/* Tablet — >= 768px */
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-8);
+  }
+}
+
+/* Desktop — >= 1024px */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-12);
+  }
+}
+
+/* Wide — >= 1400px: cap container to design-token max-width */
+@media (min-width: 1400px) {
+  .container {
+    max-width: var(--container-max);
+  }
+}
+
+/* ─── 3.2 · Journey Section — Two-Column Grid ───────────────────────────────
+ *
+ * Mobile  : single column, image stacked below text (order: 2)
+ * Tablet+ : two equal columns side-by-side, vertically centred
+ */
+
+.journey__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.journey__image-wrap {
+  order: 2; /* image below text on mobile */
+}
+
+@media (min-width: 768px) {
+  .journey__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  .journey__image-wrap {
+    order: unset; /* restore natural document order on tablet+ */
+  }
+}
+
+/* ─── 3.3 · Classes Section — Responsive Card Grid ──────────────────────────
+ *
+ * Mobile  (< 768px)        : single column
+ * Tablet  (768px – 1023px) : two columns
+ * Desktop (>= 1024px)      : four columns
+ */
+
+.classes__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .classes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .classes__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
